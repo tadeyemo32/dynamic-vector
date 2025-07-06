@@ -70,5 +70,24 @@ int vector_push(ArrayList *vector, void *element) {
 
 
 
+int vector_pop(ArrayList *vector, void *out_element){
+
+    if (!vector || vector->size == 0 || !out_element) {
+        printf("Invalid vector or out_element pointer.\n");
+        return -1;
+    }
+
+    vector->size--;
+
+    void *src = (char *)vector->data + (vector->size * vector->element_size);
+    memcpy(out_element, src, vector->element_size);
+
+    return 0;  
+
+
+}
+
+
+
 
 
