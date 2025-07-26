@@ -70,7 +70,7 @@ int vector_push(ArrayList *vector, void *element) {
 
 
 
-int vector_pop(ArrayList *vector, void *out_element){
+int vector_popback(ArrayList *vector, void *out_element){
 
     if (!vector || vector->size == 0 || !out_element) {
         printf("Invalid vector or out_element pointer.\n");
@@ -84,8 +84,9 @@ int vector_pop(ArrayList *vector, void *out_element){
 
     return 0;  
 
-
 }
+
+
 
 
 

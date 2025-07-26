@@ -16,7 +16,7 @@ void free_vector(ArrayList *vector);
 
 int vector_push(ArrayList *vector, void *element);
 
-int vector_pop(ArrayList *vector, void *out_element);
+int vector_popback(ArrayList *vector, void *out_element);
 
 void *vector_get(ArrayList *vector, size_t index);
 
